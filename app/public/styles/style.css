@@ -113,3 +113,37 @@ footer {
   min-width: 5rem;
   font-size: 1rem;
 }
+
+.register-page, .login-page {
+  padding: 2rem;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.register-page input, .login-page input {
+  padding: 0.5rem;
+  border-radius: 12px;
+  border: 1px gray solid;
+  /* border: 1px solid #e9cd79; */
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 1rem;
+  min-width: 15rem;
+}
+
+.register-page button, .login-page button {
+  padding: 0.5rem;
+  border-radius: 12px;
+  border: 1px gray solid;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 1rem;
+  min-width: 5rem;
+  font-size: 1rem;
+}
+
+.register-page h1, .login-page h1 {
+  font-size: 3rem;
+}
+

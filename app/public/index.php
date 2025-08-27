@@ -1,6 +1,19 @@
 <?php
 declare(strict_types=1);
+
+session_start();
+
+include_once "includes/inc.db.php";
+
 $title = "Poemify";
+
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
+
+}
+
+if($_SERVER['REQUEST_METHOD'] === "GET") {
+
+}
 
 
 // Det finns en inbyggd metod i php som kan visa hur php är konfigurerat...
@@ -40,8 +53,8 @@ $title = "Poemify";
     
 
     <div id="button-container">
-        <a href="/">Log in</a>
-        <a href="/">Register</a>
+        <a href="/login.php">Log in</a>
+        <a href="/register.php">Register</a>
     </div>
     </div>
 
