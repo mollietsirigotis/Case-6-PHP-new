@@ -5,7 +5,7 @@
 }
 
 body {
-  text-align: center;
+  /* text-align: center; */
   background-color: #f1e9d2;
   font-family: "Courier New", Courier, monospace;
   /* background-color: #F1EFE7; */
@@ -69,5 +69,47 @@ footer {
   bottom: 0;
   border: solid 1px black;
   width: 100%;
-  font-family: "poppins";
+}
+
+.write-poem-page {
+  padding: 2rem;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px gray solid;
+  /* border: 1px solid #e9cd79; */
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 1rem;
+  min-width: 15rem;
+}
+
+#poem {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px gray solid;
+  /* border: 1px solid #e9cd79; */
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 1rem;
+  min-width: 25rem;
+  height: 30rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  resize: vertical;
+}
+
+#submit {
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px gray solid;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 1rem;
+  min-width: 5rem;
+  font-size: 1rem;
 }
