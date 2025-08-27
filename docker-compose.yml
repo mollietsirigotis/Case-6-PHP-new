@@ -8,23 +8,23 @@ services:
             - ./configurations/php.ini:/usr/local/etc/php/php.ini
             - ./configurations/apache2.conf:/etc/apache2/apache2.conf
         ports:
-            - "${LOCAL_PORT:-8050}:80"
+            - "${LOCAL_PORT:-8060}:80"
     mysql:
         image: mariadb:latest
         environment:
             MYSQL_ROOT_PASSWORD: db_root_password
             MYSQL_USER: db_user
             MYSQL_PASSWORD: db_password
-            MYSQL_DATABASE: db_template
+            MYSQL_DATABASE: db_case
         volumes:
             - mysqldata:/var/lib/mysql
         ports:
-            - 38060:3306
+            - 38070:3306
     phpmyadmin:
         image: phpmyadmin
         restart: always
         ports:
-            - 8051:80
+            - 8061:80
         environment:
             - PMA_ARBITRARY=1
         depends_on:

@@ -1,3 +1,3 @@
 <header>
-    <img src="/img/Contact-Book-Logo.png" alt="Contact Book Logo">
+    <img src="/img/Poem-Logo.png" alt="Poem Logo">
 </header>
