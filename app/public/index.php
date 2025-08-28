@@ -15,13 +15,6 @@ if($_SERVER['REQUEST_METHOD'] === "GET") {
 
 }
 
-
-// Det finns en inbyggd metod i php som kan visa hur php är konfigurerat...
-// phpinfo();
-
-// kommandot die avbryter efterföljande kod
-// die;
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -42,6 +35,7 @@ if($_SERVER['REQUEST_METHOD'] === "GET") {
     ?>
 
     <div class="start-page">
+        <img src="./img/Divider-Blue.png" alt="divider">
     <h1>Welcome to Poemify!</h1>
     <p>
         Write poems and save them in a database where<br>

@@ -67,6 +67,7 @@ if($_SERVER['REQUEST_METHOD'] === "GET") {
     ?>
 
     <div class="login-page">
+        <img src="./img/Divider-Blue.png" alt="divider">
         <h1><?= $title ?></h1>
 
     <form method="POST" action="">

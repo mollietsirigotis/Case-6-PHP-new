@@ -9,16 +9,6 @@ $title = "Register";
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
-    $sql = "
-        CREATE TABLE IF NOT EXISTS `db_case` . `users` (
-        `id` INT NOT NULL AUTO_INCREMENT ,
-        `username` VARCHAR(20) NOT NULL UNIQUE,
-        `password` VARCHAR(100) NOT NULL,
-        PRIMARY KEY (`id`)
-        )
-        ENGINE = InnoDB
-        ";
-
     $sql = $pdo->exec($sql);
 
     $password = $_POST['password'];
@@ -92,6 +82,7 @@ if($_SERVER['REQUEST_METHOD'] === "GET") {
     ?>
 
     <div class="register-page">
+        <img src="./img/Divider-Blue.png" alt="divider">
         <h1><?= $title ?></h1>
 
     <form method="POST"action="">
@@ -112,6 +103,6 @@ if($_SERVER['REQUEST_METHOD'] === "GET") {
     <?php
     include "includes/footer.php";
     ?>
-    
+
 </body>
 </html>

@@ -10,6 +10,20 @@ $sql = "
         PRIMARY KEY (`id`)
         )
         ENGINE = InnoDB
+        ;
+        CREATE TABLE IF NOT EXISTS `db_case` . `poems` (
+        `id` INT NOT NULL AUTO_INCREMENT ,
+        `title` VARCHAR(40) NOT NULL ,
+        `poem` VARCHAR(250) NOT NULL ,
+        `user_id` INT NOT NULL ,
+        PRIMARY KEY (`id`))
+        ENGINE = InnoDB
+        ;
+        ALTER TABLE `poems` 
+        ADD FOREIGN KEY 
+        (`user_id`) REFERENCES `users`(`id`) 
+        ON DELETE NO ACTION 
+        ON UPDATE NO ACTION;
         ";
 
         try {

@@ -13,18 +13,27 @@ body {
 
 header {
   text-align: center;
+  background-color: #212063;
 }
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 0 1rem 0;
+  background-color: #212063;
   gap: 2rem;
+  color: white;
 }
-a {
-  color: black;
+nav a {
+  color: white;
   text-decoration: none;
   font-size: 1.5rem;
+
+}
+a {
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: black;
 }
 
 a:hover {
@@ -38,7 +47,7 @@ a:hover {
   min-height: 65vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   gap: 1rem;
 }
@@ -59,16 +68,19 @@ p {
   margin: 0.5rem;
 }
 #button-container {
-  margin: 1rem;
+
+  margin: 3rem 0;
 }
 footer {
   text-align: center;
   padding: 1.8rem;
-  background-color: #f1e9d2;
+  background-color: #212063;
+  /* background-color: #f1e9d2; */
   position: fixed;
   bottom: 0;
   border: solid 1px black;
   width: 100%;
+  color: white;
 }
 
 .write-poem-page {
