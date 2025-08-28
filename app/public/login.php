@@ -8,19 +8,44 @@ include_once "includes/inc.db.php";
 $title = "Log in";
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+
+    // Kontrollera att båda fälten finns och inte är tomma
+    if (empty($username) || empty($password)) {
+        echo "<p>Fill in both fields!</p>";
+    }
+
+    $stmt = $pdo->prepare("SELECT * FROM `users` WHERE `username` = :username");
+    $stmt->bindParam(":username", $username);
+    $stmt->execute();
+
+    $user = $stmt->fetch();
+
+    // var_dump($user);
+    // print_r($user);
+
+    if (password_verify($password, $user['password'])) {
+
+        // Om lösenorden matchar - Användaren loggas in
+        $_SESSION['username'] = $user['username'];
+        $_SESSION['user_id'] = $user['id'];
+
+        // Dirigeras till startsidan
+
+        header('Location: /?authenticated');
+
+    } else {
+        echo "Wrong password...";
+    }
    
 }
 
 if($_SERVER['REQUEST_METHOD'] === "GET") {
 
 }
-
-
-// Det finns en inbyggd metod i php som kan visa hur php är konfigurerat...
-// phpinfo();
-
-// kommandot die avbryter efterföljande kod
-// die;
 
 ?>
 <!DOCTYPE html>
@@ -55,8 +80,6 @@ if($_SERVER['REQUEST_METHOD'] === "GET") {
     </form>
     
     </div>
-
-   
 
     <?php
     include "includes/footer.php";
