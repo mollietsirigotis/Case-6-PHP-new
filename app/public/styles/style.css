@@ -114,7 +114,7 @@ footer {
   font-size: 1rem;
 }
 
-.register-page, .login-page {
+.register-page, .login-page, .logout-page {
   padding: 2rem;
   min-height: 65vh;
   display: flex;
@@ -147,3 +147,16 @@ footer {
   font-size: 3rem;
 }
 
+.logout-page {
+  padding: 2rem;
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.5rem;
+}
+.logout-page h3 {
+  font-weight: 600;
+}

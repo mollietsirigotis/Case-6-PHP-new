@@ -2,17 +2,22 @@
 
 declare(strict_types=1);
 
-include_once "includes/inc.db.php";
+session_start();
 
+include_once "includes/inc.db.php";
 
 $title = "Poemify";
 
+if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
-// Det finns en inbyggd metod i php som kan visa hur php är konfigurerat...
-// phpinfo();
+}
 
-// kommandot die avbryter efterföljande kod
-// die;
+if($_SERVER['REQUEST_METHOD'] === "GET") {
+
+}
+
+$title = "Write Poem";
+
 
 ?>
 <!DOCTYPE html>
@@ -45,31 +50,6 @@ $title = "Poemify";
 
         <!-- Visa tabellens innehåll -->
 
-        <?php
-
-        // bestämma vilken tabell / tabeller som ska väljas ut
-        // med ett SELECT statement
-
-        $sql = "SELECT * FROM `poems`";
-
-        // Förväntade resultatet ska finnas i variabeln $rows
-        $rows = $pdo->query($sql)->fetchAll();
-
-        // Se resultatet
-        // print_r($rows);
-
-        // Visa resultat
-        echo "<ul>";
-        foreach ($rows as $row) {
-
-            echo "<li>" . $row['title'] . "</li>";
-            echo "<li>" . $row['poem'] . "</li>";
-            echo "<li>" . $row['user_id'] . "</li>";
-        }
-
-        echo "</ul>";
-        ?>
-    </div>
     <?php
     include "includes/footer.php";
     ?>
