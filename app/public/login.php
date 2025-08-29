@@ -30,9 +30,9 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_id'] = $user['id'];
 
-        // Dirigeras my-poems.php sidan
+        // Dirigeras startsidan
 
-        header('Location: /my-poems.php');
+        header('Location: /index.php');
         exit;
 
     } else {
