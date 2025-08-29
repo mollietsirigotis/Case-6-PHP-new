@@ -65,34 +65,40 @@ $rows = $stmt->fetchAll();
 
     <div class="my-poems-page">
         <h1><?= $title ?></h1>
+        <img src="./img/Feather-Pen.png" alt="Feather Pen">
 
-        <div class="poem-card">
+        
             <?php
             foreach ($rows as $row) {
+                echo '<div class="poem-card">';
 
-                echo '<div class="poem-title">';
+                echo '<div class="my-poems-content">';
                 echo '<h3>';
                 echo $row['title'];
                 echo '</h3>';
-                echo '</div>';
 
-                echo '<div class="poem-content">';
                 echo '<p>';
                 echo $row['poem'];
                 echo '</p>';
-                echo '</div>';
 
-                echo '<div class="poem-creator">';
                 echo $row['username'];
                 echo '</div>';
-            }
-            ?>
-        </div>
-    </div>
+                
 
-    <?php
-    include "includes/footer.php";
-    ?>
+                echo '<div class="poem-buttons">';
+                echo '<a href="edit-poem.php?id=' . $row['id'] . '" class="edit-button"><img src="./img/edit-pen-icon.png" alt="Pen icon"></a> ';
+                echo '<a href="delete-poem.php?id=' . $row['id'] . '" class="delete-button" onclick="return confirm(\'Are you sure you want to delete this poem?\');"><img src="./img/delete-bin-icon.png" alt="Delete icon"></a>';
+                echo '</div>';
+                echo '</div>';
+
+                
+            }
+                ?>
+            
+        <?php
+        include "includes/footer.php";
+        ?>
+    </div>
 </body>
 
 </html>

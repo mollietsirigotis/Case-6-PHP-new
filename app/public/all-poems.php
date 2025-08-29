@@ -56,36 +56,37 @@ $rows = $stmt->fetchAll();
     include "includes/nav.php";
     ?>
 
-    <div class="my-poems-page">
+    <div class="all-poems-page">
         <h1><?= $title ?></h1>
+        <img src="./img/Feather-Pen.png" alt="Feather Pen">
 
-        <div class="poem-card">
+        
             <?php
             foreach ($rows as $row) {
+                echo '<div class="poem-card">';
 
-                echo '<div class="poem-title">';
+                echo '<div class="all-poems-content">';
                 echo '<h3>';
                 echo $row['title'];
                 echo '</h3>';
-                echo '</div>';
-
-                echo '<div class="poem-content">';
+                
+                
                 echo '<p>';
                 echo $row['poem'];
                 echo '</p>';
-                echo '</div>';
-
-                echo '<div class="poem-creator">';
+                
+                
                 echo $row['username'];
+                
+                echo '</div>';
                 echo '</div>';
             }
             ?>
-        </div>
-    </div>
-
-    <?php
+        <?php
     include "includes/footer.php";
     ?>
+    </div>
+    
 </body>
 
 </html>

@@ -9,6 +9,7 @@ body {
   background-color: #f1e9d2;
   font-family: "Courier New", Courier, monospace;
   /* background-color: #F1EFE7; */
+  /* position: relative; */
 }
 
 header {
@@ -76,9 +77,10 @@ footer {
   padding: 1.8rem;
   background-color: #212063;
   /* background-color: #f1e9d2; */
-  position: fixed;
+  /* position: fixed; */
+  position: absolute;
   bottom: 0;
-  border: solid 1px black;
+  /* border: solid 1px black; */
   width: 100%;
   color: white;
 }
@@ -177,24 +179,51 @@ footer {
   font-size: 2rem;
 }
 
-.my-poems-page {
-  padding: 3rem;
+.my-poems-page, .all-poems-page {
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .poem-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: .5rem;
-  /* background-color: #60463B;
-  color: white; */
+  justify-content: space-between;
+  background-color: #788A72;
   padding: 4rem;
   border-radius: 2rem;
+  margin-bottom: 3rem;
+  min-width: 50vw;
+  max-width: 50vw;
 } 
+.all-poems-content h3, .my-poems-content h3 {
+  font-size: 1.5rem;
+  padding-bottom: .5rem;
+}
 
-.poem-creator {
-  margin-bottom: 2rem;
+.all-poems-page img, .my-poems-page img {
+    width: 5rem;
+    margin-bottom: 1.2rem;
+}
+.all-poems-page h1, .my-poems-page h1 {
+  margin-bottom: 1.5rem;
+}
+.poem-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.poem-buttons img {
+  width: 40px;
+}
+
+
+.poem-buttons img:hover  {
+  transform: scale(1.1);
 }
