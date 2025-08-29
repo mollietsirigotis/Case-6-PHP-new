@@ -14,7 +14,7 @@ $sql = "
         CREATE TABLE IF NOT EXISTS `db_case` . `poems` (
         `id` INT NOT NULL AUTO_INCREMENT ,
         `title` VARCHAR(40) NOT NULL ,
-        `poem` VARCHAR(250) NOT NULL ,
+        `poem` VARCHAR(500) NOT NULL ,
         `user_id` INT NOT NULL ,
         PRIMARY KEY (`id`))
         ENGINE = InnoDB

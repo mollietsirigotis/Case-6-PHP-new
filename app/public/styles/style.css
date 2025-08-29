@@ -173,15 +173,28 @@ footer {
   font-weight: 600;
 }
 
-ul#poems {
-  color: black;
-  list-style: none;
-}
-ul#poems li {
-  display: flex;
-  justify-content: space-between;
-}
-
 .write-poem-page h1 {
   font-size: 2rem;
+}
+
+.my-poems-page {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.poem-card {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  /* background-color: #60463B;
+  color: white; */
+  padding: 4rem;
+  border-radius: 2rem;
+} 
+
+.poem-creator {
+  margin-bottom: 2rem;
 }

@@ -82,7 +82,7 @@ $title = "Write Poem";
 
             <form action="" method="post">
                 <input type="text" name="title" id="title" placeholder="Title..." required><br>
-                <textarea name="poem" id="poem" placeholder="Write poem here..." required></textarea><br>
+                <textarea name="poem" id="poem" placeholder="Write poem here... (1-500 characters)" required></textarea><br>
                 <input type="submit" value="Save" id="submit">
             </form>
 
