@@ -24,18 +24,16 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     $user = $stmt->fetch();
 
-    // var_dump($user);
-    // print_r($user);
-
     if (password_verify($password, $user['password'])) {
 
         // Om lösenorden matchar - Användaren loggas in
         $_SESSION['username'] = $user['username'];
         $_SESSION['user_id'] = $user['id'];
 
-        // Dirigeras till startsidan
+        // Dirigeras my-poems.php sidan
 
-        header('Location: /?authenticated');
+        header('Location: /my-poems.php');
+        exit;
 
     } else {
         echo "Wrong password...";
@@ -71,10 +69,10 @@ if($_SERVER['REQUEST_METHOD'] === "GET") {
         <h1><?= $title ?></h1>
 
     <form method="POST" action="">
-        <label for="username">Username</label><br>    
+        <label for="username">Username:</label><br>    
         <input type="text" name="username" id="username" required><br>
 
-        <label for="password">Password</label><br>
+        <label for="password">Password:</label><br>
         <input type="password" name="password" id="password" required><br>
 
         <button type="submit">Log in</button>

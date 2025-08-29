@@ -172,3 +172,16 @@ footer {
 .logout-page h3 {
   font-weight: 600;
 }
+
+ul#poems {
+  color: black;
+  list-style: none;
+}
+ul#poems li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.write-poem-page h1 {
+  font-size: 2rem;
+}
