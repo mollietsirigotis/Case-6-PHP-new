@@ -9,7 +9,6 @@ $title = "Register";
 
 if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
-    $sql = $pdo->exec($sql);
 
     $password = $_POST['password'];
     $password2 = $_POST['password2'];
@@ -20,8 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     }
 
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // echo "<p>hashat lösenord: $hashed_password</p>";
 
 
     // Kollar om användarnamnet redan finns i databasen

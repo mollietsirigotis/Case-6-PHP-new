@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
     }
 }
 
-// Hämtar alla dikter från poems och användarnamn från users
+// Hämtar alla dikter skrivna av inloggade användaren från poems och användarnamn från users
 
 $sql = "SELECT poems.*, users.username 
         FROM poems 
@@ -49,7 +49,7 @@ $rows = $stmt->fetchAll();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $title ?></title>
+    <title><?= $title ?></title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
@@ -64,7 +64,7 @@ $rows = $stmt->fetchAll();
     ?>
 
     <div class="my-poems-page">
-        <h1>My Poems</h1>
+        <h1><?= $title ?></h1>
 
         <div class="poem-card">
             <?php
