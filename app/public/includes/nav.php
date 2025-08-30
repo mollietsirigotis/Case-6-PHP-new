@@ -12,9 +12,12 @@
 
         
         echo '<a href="/my-poems.php">My Poems</a> |';
-        echo '<a href="/write-poem.php">Write Poem</a> |';
-        echo  '<a href="/logout.php">Log Out</a> |';
-        echo " Logged in: ". $_SESSION['username'];
+        echo '<a href="/write-poem.php">Write Poem</a>';
+        echo " | ";
+        echo "<a> Logged in: ". $_SESSION['username']. "</a>";
+        echo " | ";
+        echo  '<a href="/logout.php">Log Out</a>';
+        
         
 
     } else {
