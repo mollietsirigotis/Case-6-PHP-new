@@ -141,11 +141,20 @@ footer {
   padding: 0.5rem;
   border-radius: 12px;
   border: 1px gray solid;
-  /* border: 1px solid #e9cd79; */
   font-family: "Courier New", Courier, monospace;
   margin-bottom: 1rem;
   min-width: 15rem;
 }
+
+#update-btn {
+  padding: 0.5rem;
+   border-radius: 12px;
+  border: 1px gray solid;
+  font-family: "Courier New", Courier, monospace;
+  margin-bottom: 1rem;
+  min-width: 6rem;
+}
+
 
 .register-page button,
 .login-page button {
@@ -161,6 +170,10 @@ footer {
 .register-page h1,
 .login-page h1 {
   font-size: 3rem;
+}
+#log-in-btn, #register-btn, #update-btn {
+  background-color: white;
+  color: #212063;
 }
 
 .logout-page {
@@ -190,6 +203,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .poem-card {
@@ -271,6 +285,12 @@ footer {
   width: 100%;
   min-width: 0;
 }
+.login-page, .register-page {
+  margin-bottom: 5rem;
+}
+.edit-poem-page {
+  margin-bottom: 5rem;
+}
 }
 
 @media screen and (max-width: 480px) {
@@ -297,6 +317,19 @@ footer {
 }
 .write-poem-page {
   margin-bottom: 4rem;
+}
+.poem-card {
+  min-width: 5rem;
+  width: 100%;
+}
+.poem-card h3 {
+  font-size: 1.2rem;
+}
+.poem-card p {
+  font-size: .8rem;
+}
+.edit-poem-page {
+  margin-bottom: 5rem;
 }
 
 }

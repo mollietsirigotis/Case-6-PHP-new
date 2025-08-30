@@ -74,7 +74,7 @@ if($_SERVER['REQUEST_METHOD'] === "GET") {
         <label for="password">Password:</label><br>
         <input type="password" name="password" id="password" required><br>
 
-        <button type="submit">Log in</button>
+        <button type="submit" id="log-in-btn">Log in</button>
     </form>
     
     </div>

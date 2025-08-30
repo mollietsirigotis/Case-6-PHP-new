@@ -110,10 +110,10 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
 
             <form action="" method="post">
                 <input type="text" name="title" id="title" value="<?= $title ?>" placeholder="Title..." required><br>
-                <textarea name="poem" id="poem" placeholder="Write poem here... (1-500 characters)" required><?= $poem ?></textarea>
+                <textarea name="poem" id="poem" placeholder="Write poem here... (1-500 characters)" required><?= $poem ?></textarea><br>
 
                 <input type="hidden" name="poem_id" value="<?= $poem_id ?>">
-                <input type="submit" value="Update" name="update">
+                <input type="submit" value="Update" name="update" id="update-btn">
 
                 <?php
                 ?>

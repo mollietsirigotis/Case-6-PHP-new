@@ -91,7 +91,7 @@ if($_SERVER['REQUEST_METHOD'] === "GET") {
         <label for="password2">Confirm password:</label><br>
         <input type="password" name="password2" id="password2" required><br>
 
-        <button type="submit">Register</button>
+        <button type="submit" id="register-btn">Register</button>
     </form>
 
     </div>
