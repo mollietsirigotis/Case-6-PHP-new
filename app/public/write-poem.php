@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
         $stmt = $pdo->prepare($sql);
 
-        // Koppla namngivna platshållare till variabler occh datatyp
+        // Koppla namngivna platshållare till variabler och datatyp
         $stmt->bindValue(':title', $title, PDO::PARAM_STR);
         $stmt->bindValue(':poem', $poem, PDO::PARAM_STR);
         $stmt->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
@@ -57,7 +57,6 @@ $title = "Write Poem";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $title ?></title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -88,6 +87,9 @@ $title = "Write Poem";
 
 
         <?php } ?>
+
+        
+    </div>
     <?php
     include "includes/footer.php";
     ?>

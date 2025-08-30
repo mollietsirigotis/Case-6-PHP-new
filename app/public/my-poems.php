@@ -30,16 +30,16 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
 
 // Hämtar alla dikter skrivna av inloggade användaren från poems och användarnamn från users
 
-$sql = "SELECT poems.*, users.username 
+        $sql = "SELECT poems.*, users.username 
         FROM poems 
         JOIN users ON poems.user_id = users.id 
         WHERE poems.user_id = :user_id";
 
-$stmt = $pdo->prepare($sql);
-$stmt->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
-$stmt->execute();
+        $stmt = $pdo->prepare($sql);
+        $stmt->bindValue(':user_id', $_SESSION['user_id'], PDO::PARAM_INT);
+        $stmt->execute();
 
-$rows = $stmt->fetchAll();
+        $rows = $stmt->fetchAll();
 
 
 ?>
@@ -50,7 +50,6 @@ $rows = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $title ?></title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -87,18 +86,18 @@ $rows = $stmt->fetchAll();
 
                 echo '<div class="poem-buttons">';
                 echo '<a href="edit-poem.php?id=' . $row['id'] . '" class="edit-button"><img src="./img/edit-pen-icon.png" alt="Pen icon"></a> ';
-                echo '<a href="delete-poem.php?id=' . $row['id'] . '" class="delete-button" onclick="return confirm(\'Are you sure you want to delete this poem?\');"><img src="./img/delete-bin-icon.png" alt="Delete icon"></a>';
+                echo '<a href="delete-poem.php?id=' . $row['id'] . '" class="delete-button" name="delete" onclick="return confirm(\'Are you sure you want to delete this poem?\');"><img src="./img/delete-bin-icon.png" alt="Delete icon"></a>';
                 echo '</div>';
                 echo '</div>';
-
                 
             }
                 ?>
             
-        <?php
+        
+    </div>
+    <?php
         include "includes/footer.php";
         ?>
-    </div>
 </body>
 
 </html>

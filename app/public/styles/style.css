@@ -77,8 +77,8 @@ footer {
   padding: 1.8rem;
   background-color: #212063;
   /* background-color: #f1e9d2; */
-  /* position: fixed; */
-  position: absolute;
+  position: fixed;
+  /* position: absolute; */
   bottom: 0;
   /* border: solid 1px black; */
   width: 100%;
@@ -87,11 +87,6 @@ footer {
 
 .write-poem-page {
   padding: 2rem;
-  min-height: 65vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 #title {
@@ -179,13 +174,15 @@ footer {
   font-size: 2rem;
 }
 
-.my-poems-page, .all-poems-page {
+.my-poems-page, 
+.all-poems-page, 
+.write-poem-page,
+.edit-poem-page {
   padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 
 .poem-card {
