@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
         // Skickar ut reseultatet till användaren
         if ($result) {
-            echo "<p>Successfully registered, please navigate to: <a href='/login.php'>Log in</a></p>";
+            // echo "<p>Successfully registered, please navigate to: <a href='/login.php'>Log in</a></p>";
         } else {
             echo "<p>Register failed. Try again</p>";
         }
