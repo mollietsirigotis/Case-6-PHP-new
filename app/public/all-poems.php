@@ -78,7 +78,7 @@ $rows = $stmt->fetchAll();
 
 
             echo '<p>';
-            echo $row['poem'];
+            echo nl2br($row['poem']);
             echo '</p>';
 
 

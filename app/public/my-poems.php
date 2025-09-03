@@ -77,7 +77,7 @@ if ($_SERVER['REQUEST_METHOD'] === "GET") {
                 echo '</h3>';
 
                 echo '<p>';
-                echo $row['poem'];
+                echo nl2br($row['poem']);
                 echo '</p>';
 
                 echo $row['username'];

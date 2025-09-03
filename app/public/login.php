@@ -24,6 +24,11 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
 
     $user = $stmt->fetch();
 
+    if (!$user) {
+        echo 'The user does not exist. Navigate to the <a href="/register.php">register page</a> to create an account.';
+        exit;
+    }
+
     if (password_verify($password, $user['password'])) {
 
         // Om lösenorden matchar - Användaren loggas in
@@ -33,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         // Dirigeras startsidan
 
         header('Location: /index.php');
-        exit;
+        die();
 
     } else {
         echo "Wrong password...";

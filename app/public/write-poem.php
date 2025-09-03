@@ -14,6 +14,11 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     $poem = $_POST['poem'] ?? null;
     $user_id = $_POST['user_id'] ?? NULL;
 
+    if (strlen($poem) > 500) {
+        echo 'Your poem has to be 500 characters or less.';
+        exit;
+    }
+
     if ($title && $poem) {
 
         // sql syntax med namngivna platshållare
@@ -81,7 +86,7 @@ $title = "Write Poem";
 
             <form action="" method="post">
                 <input type="text" name="title" id="title" placeholder="Title..." required><br>
-                <textarea name="poem" id="poem" placeholder="Write poem here... (1-500 characters)" required></textarea><br>
+                <textarea name="poem" id="poem" placeholder="Write poem here... (1-500 characters)" required maxlength="500"></textarea><br>
                 <input type="submit" value="Save" id="submit">
             </form>
 
